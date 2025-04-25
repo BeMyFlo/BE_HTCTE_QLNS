@@ -1,5 +1,4 @@
 import mongoose from 'mongoose';
-import seedDatabase from './seedDatabase.js';
 
 const useDatabase = async () => {
   try {

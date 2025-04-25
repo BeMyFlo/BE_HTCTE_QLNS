@@ -1,4 +1,4 @@
-import { ProductModel } from "../models/product";
+import { ProductModel } from "../models/product.js";
 
 const create = async (data) => {
   try {
@@ -39,10 +39,22 @@ const findById = async (id) => {
   }
 };
 
+const find = async () => {
+  try {
+    const products = await ProductModel.find({});
+    return products;
+  } catch (error) {
+    throw new Error(error.message);
+  }
+};
+
+
 const ProductRepository = {
   create,
   find,
   findById,
+  findByCategory,
+  getAllProducts,
 };
 
 export default ProductRepository;

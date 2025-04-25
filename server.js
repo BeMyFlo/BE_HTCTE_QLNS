@@ -5,6 +5,7 @@ import * as dotenv from "dotenv";
 import useRoutes from "./routers/index.js";
 import cors from "cors";
 import cookieParser from "cookie-parser";
+import staffRouter from "./modules/staff/staff.route.js";
 dotenv.config();
 
 useDatabase();
@@ -15,8 +16,9 @@ app.use(cors());
 app.use(bodyParser.json());
 app.use(bodyParser.urlencoded({ extended: true }));
 app.use("/uploads", Express.static("uploads"));
+app.use("/api/staff", staffRouter);
 
-useRoutes(app);
+
 
 app.listen(process.env.PORT || 8000, (error) => {
   if (!error) {
