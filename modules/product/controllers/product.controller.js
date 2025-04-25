@@ -1,5 +1,5 @@
 import ProductRepository from "../repository/product.repository.js";
-import Category from "../../category/models/category.js";
+// import Category from "../../category/models/category.js";
 import { uploadImageToFirebase } from "../../../services/uploadImage.js";
 
 export const getListProduct = async (req, res) => {

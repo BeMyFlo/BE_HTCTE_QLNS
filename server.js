@@ -20,6 +20,6 @@ useRoutes(app);
 
 app.listen(process.env.PORT || 8000, (error) => {
   if (!error) {
-    console.log(`> Bpool is running on Port:${process.env.PORT}!`);
+    console.log(`>App is running on Port:${process.env.PORT}!`);
   }
 });

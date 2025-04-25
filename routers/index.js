@@ -1,4 +1,4 @@
-import userRouter from "../modules/user/user.routes.js";
+// import userRouter from "../modules/user/user.routes.js";
 import productRouter from "../modules/product/product.routes.js";
 
 const useRoutes = (app) => {
