@@ -1,7 +1,5 @@
 import { Router } from "express";
-import { StaffController } from "./controllers/staff.controller.js";
-
-
+import StaffController from "../staff/controllers/staff.controller.js"; 
 
 
 
@@ -10,6 +8,8 @@ const router = new Router();
         router
         .route("/create").post(StaffController.createEmployee);
         router.route("/get").get(StaffController.getUser);
+        router.route("/update/:maNV").put(StaffController.updateEmployee);
+        router.route("/delete/:maNV").delete(StaffController.deleteEmployee); 
 
-
+        
         export default router;

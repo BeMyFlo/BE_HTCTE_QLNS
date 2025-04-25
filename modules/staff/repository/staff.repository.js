@@ -5,8 +5,8 @@ class StaffRepository {
   static async create(employeeData) {
       try {
           const newEmployee = new StaffModel(employeeData);
-          await newEmployee.save(); // Lưu vào cơ sở dữ liệu
-          return newEmployee; // Trả về đối tượng nhân viên vừa tạo
+          await newEmployee.save(); 
+          return newEmployee; // 
       } catch (error) {
           console.error('Error saving employee:', error);
           throw new Error('Error saving employee');
@@ -34,10 +34,24 @@ class StaffRepository {
         throw new Error('Error checking email existence');
     }
 }
+
+
+
+static async findByMaNV(maNV) {
+  try {
+    const employee = await StaffModel.findOne({ MaNV: maNV });
+    if (!employee) {
+      return null;
+    }
+    return employee;
+  } catch (error) {
+    console.error('Error finding employee by MaNV:', error);
+    throw new Error('Error finding employee by MaNV');
+  }
+}
+
+
 };
-
-
-
 
 
 
