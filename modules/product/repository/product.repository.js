@@ -1,4 +1,4 @@
-import { ProductModel } from "../models/product";
+// import { ProductModel } from "../models/product";
 
 const create = async (data) => {
   try {
@@ -41,7 +41,7 @@ const findById = async (id) => {
 
 const ProductRepository = {
   create,
-  find,
+  // find,
   findById,
 };
 
